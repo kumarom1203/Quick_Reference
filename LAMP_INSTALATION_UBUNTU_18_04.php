@@ -41,5 +41,15 @@
 18. sudo service apache2 restart
 
 
+Install Let’s Encrypt client (Certbot)
+
+
+1. sudo apt-get update && sudo apt-get install software-properties-common
+
+2. sudo add-apt-repository universe && sudo add-apt-repository ppa:certbot/certbot
+
+3. sudo apt-get update && sudo apt-get install certbot python-certbot-apache
+
+4. sudo certbot --apache
 
 
