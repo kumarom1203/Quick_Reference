@@ -41,6 +41,22 @@
 18. sudo service apache2 restart
 
 
+Enable Apache Mod_Rewrite (ENABLE HTACCESS)
+
+1. sudo a2enmod rewrite
+
+then past following into /etc/apache2/sites-available/000-default.conf
+
+<Directory /var/www/html>
+        Options Indexes FollowSymLinks MultiViews
+        AllowOverride All
+        Require all granted
+</Directory>
+
+then 
+2. sudo systemctl restart apache2
+
+
 Install Let’s Encrypt client (Certbot)
 
 
